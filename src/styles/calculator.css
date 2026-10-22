@@ -1,0 +1,160 @@
+/* Container Utama Kalkulator */
+.calculator {
+  max-width: 360px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* Paparan Skrin Keputusan */
+.result {
+  background-color: #181825;
+  color: #a6adc8;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: right;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Susunan Grid Butang (4 Lajur) */
+.button-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* Gaya Butang Asas */
+.button {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #313244;
+  color: #cdd6f4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #45475a;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Butang Operator (+, -, *, /, =) */
+.button.operator {
+  background-color: #fab387;
+  color: #11111b;
+}
+
+.button.operator:hover {
+  background-color: #f9e2af;
+}
+
+/* Butang Khas (C, Del) */
+.button.special {
+  background-color: #f38ba8;
+  color: #11111b;
+}
+
+.button.special:hover {
+  background-color: #eba0ac;
+}
+
+/* Bahagian Sejarah (History) */
+.history {
+  border-top: 1px solid #313244;
+  padding-top: 15px;
+}
+
+.history-title {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #bac2de;
+}
+
+.history-list {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+  font-size: 0.9rem;
+  color: #a6adc8;
+}
+
+/* Scrollbar Custom untuk History */
+.history-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background-color: #45475a;
+  border-radius: 4px;
+}
+
+/* Setiap Item Sejarah */
+.history-item {
+  background-color: #181825;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.history-item:hover {
+  background-color: #313244;
+}
+
+.history-item strong {
+  color: #a6e3a1;
+}
+
+/* Butang Delete Per Item (CSS Tambahan) */
+.delete-item-btn {
+  background: #f38ba8 !important;
+  color: #11111b !important;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.delete-item-btn:hover {
+  opacity: 0.8;
+}
+
+/* Butang Clear All History */
+.clear-history-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #f38ba8;
+  color: #f38ba8;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-history-btn:hover {
+  background-color: #f38ba8;
+  color: #11111b;
+}
